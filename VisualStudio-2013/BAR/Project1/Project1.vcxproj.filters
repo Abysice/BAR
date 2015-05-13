@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Math_Source">
+      <UniqueIdentifier>{0cba1ceb-1f89-4790-8470-0121de0bdd04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BARMath.cpp">
+      <Filter>Math_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="BARVector.cpp">
+      <Filter>Math_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="BARMatrix.cpp">
+      <Filter>Math_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="BARMain.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BARMath.h">
+      <Filter>Math_Source</Filter>
+    </ClInclude>
+    <ClInclude Include="BARVector.h">
+      <Filter>Math_Source</Filter>
+    </ClInclude>
+    <ClInclude Include="BARMatrix.h">
+      <Filter>Math_Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
