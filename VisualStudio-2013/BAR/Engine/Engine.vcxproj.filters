@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Math">
+      <UniqueIdentifier>{9eb3af89-fb5c-4752-95f9-c511efdbb065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{8197b1e2-0e6c-4c02-8bea-3c5fefd6bc81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{1bcecf92-26d0-4f7b-ac6c-9b0ccca7dbff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BARSerialize.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="BARUtility.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="BARMath.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="BARMatrix.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="BARVector.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BARSerialize.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="BARMain.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="BARMath.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="BARMatrix.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="BARVector.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
