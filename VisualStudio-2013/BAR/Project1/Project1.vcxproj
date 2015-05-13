@@ -69,11 +69,14 @@
     <ClCompile Include="BARMain.cpp" />
     <ClCompile Include="BARVector.cpp" />
     <ClCompile Include="BARMatrix.cpp" />
+    <ClCompile Include="BARSerialize.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BARMath.h" />
     <ClInclude Include="BARMatrix.h" />
     <ClInclude Include="BARVector.h" />
+    <ClInclude Include="BARSerialize.h" />
+    <ClInclude Include="BARUtility.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -8,6 +8,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{509ed57b-dfdf-4cc1-8a96-042e966d42ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BARMath.cpp">
@@ -22,6 +25,9 @@
     <ClCompile Include="BARMain.cpp">
       <Filter>Base</Filter>
     </ClCompile>
+    <ClCompile Include="BARSerialize.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BARMath.h">
@@ -32,6 +38,12 @@
     </ClInclude>
     <ClInclude Include="BARMatrix.h">
       <Filter>Math_Source</Filter>
+    </ClInclude>
+    <ClInclude Include="BARSerialize.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="BARUtility.h">
+      <Filter>Utility</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

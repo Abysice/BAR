@@ -1,4 +1,4 @@
-#include <math.h>
+#include "BARMath.h"
 
 /*
  * This file Contains the prototypes for the Vector classes and their related methods
