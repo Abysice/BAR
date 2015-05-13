@@ -1,2 +1,8 @@
-# BAR
-I think I'm gonna duct tape together an engine
+#BAR engine WIP
+
+Todo:
+-Everything
+
+priorities:
+-rest of the math + serialization + utilities
+-renderer
