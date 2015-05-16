@@ -10,6 +10,9 @@
     <Filter Include="Base">
       <UniqueIdentifier>{1bcecf92-26d0-4f7b-ac6c-9b0ccca7dbff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{330f8cac-bb6c-4107-81dd-0c8e6d061d09}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BARSerialize.h">
@@ -27,6 +30,12 @@
     <ClInclude Include="BARVector.h">
       <Filter>Math</Filter>
     </ClInclude>
+    <ClInclude Include="BARScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="BARNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BARSerialize.cpp">
@@ -43,6 +52,12 @@
     </ClCompile>
     <ClCompile Include="BARVector.cpp">
       <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="BARScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="BARNode.cpp">
+      <Filter>Scene</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

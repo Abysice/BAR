@@ -1,8 +1,3 @@
 #BAR engine WIP
 
-Todo:
--Everything
-
-priorities:
--rest of the math + serialization + utilities
--renderer
+Gonna work on the Windowing + graphics first then build off that.

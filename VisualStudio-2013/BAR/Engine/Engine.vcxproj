@@ -69,6 +69,8 @@
     <ClInclude Include="BARSerialize.h" />
     <ClInclude Include="BARUtility.h" />
     <ClInclude Include="BARVector.h" />
+    <ClInclude Include="BARNode.h" />
+    <ClInclude Include="BARScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BARMain.cpp" />
@@ -76,6 +78,8 @@
     <ClCompile Include="BARMatrix.cpp" />
     <ClCompile Include="BARSerialize.cpp" />
     <ClCompile Include="BARVector.cpp" />
+    <ClCompile Include="BARScene.cpp" />
+    <ClCompile Include="BARNode.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
