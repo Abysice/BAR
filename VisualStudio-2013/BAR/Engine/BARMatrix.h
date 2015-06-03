@@ -1,3 +1,7 @@
+#ifndef MATRIX_H
+#define MATRIX_H
+
+
 #include "BARVector.h"
 
 /*
@@ -156,3 +160,8 @@ float Determinant(const Matrix4& m);
 Matrix4 Inverse(const Matrix4& m);
 Matrix4 Adjugate(const Matrix4& m);
 Matrix4 Transpose(const Matrix4& m);
+
+
+
+
+#endif

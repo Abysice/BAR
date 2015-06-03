@@ -44,6 +44,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -64,22 +65,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BARApplication.h" />
+    <ClInclude Include="BARDefines.h" />
     <ClInclude Include="BARMath.h" />
     <ClInclude Include="BARMatrix.h" />
+    <ClInclude Include="BARQuaternion.h" />
     <ClInclude Include="BARSerialize.h" />
     <ClInclude Include="BARUtility.h" />
     <ClInclude Include="BARVector.h" />
-    <ClInclude Include="BARNode.h" />
+    <ClInclude Include="BARGameObject.h" />
     <ClInclude Include="BARScene.h" />
+    <ClInclude Include="BARRendering.h" />
+    <ClInclude Include="BAREngine.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BARApplication.cpp" />
     <ClCompile Include="BARMain.cpp" />
     <ClCompile Include="BARMath.cpp" />
     <ClCompile Include="BARMatrix.cpp" />
+    <ClCompile Include="BARQuaternion.cpp" />
     <ClCompile Include="BARSerialize.cpp" />
     <ClCompile Include="BARVector.cpp" />
     <ClCompile Include="BARScene.cpp" />
-    <ClCompile Include="BARNode.cpp" />
+    <ClCompile Include="BARGameObject.cpp" />
+    <ClCompile Include="BARRendering.cpp" />
+    <ClCompile Include="BAREngine.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

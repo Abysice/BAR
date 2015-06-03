@@ -1,7 +1,12 @@
-#include "BARMatrix.h"
+#ifndef SERIALIZE_H
+#define SERIALIZE_H
+
+
+#include <string>
 #include <iostream>
 #include <fstream>
-#include <string>
+#include "BARMatrix.h"
+
 
 enum
 {
@@ -136,3 +141,4 @@ public:
 
 };
 
+#endif

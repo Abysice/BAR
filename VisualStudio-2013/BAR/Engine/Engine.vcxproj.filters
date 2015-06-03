@@ -10,6 +10,9 @@
     <Filter Include="Base">
       <UniqueIdentifier>{1bcecf92-26d0-4f7b-ac6c-9b0ccca7dbff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{9f69eead-2be0-4b01-bd41-44b0a3fa7e71}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Scene">
       <UniqueIdentifier>{330f8cac-bb6c-4107-81dd-0c8e6d061d09}</UniqueIdentifier>
     </Filter>
@@ -33,8 +36,23 @@
     <ClInclude Include="BARScene.h">
       <Filter>Scene</Filter>
     </ClInclude>
-    <ClInclude Include="BARNode.h">
+    <ClInclude Include="BARGameObject.h">
       <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="BARQuaternion.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="BARRendering.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="BARApplication.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="BAREngine.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="BARDefines.h">
+      <Filter>Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -56,8 +74,20 @@
     <ClCompile Include="BARScene.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
-    <ClCompile Include="BARNode.cpp">
+    <ClCompile Include="BARGameObject.cpp">
       <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="BARQuaternion.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="BARRendering.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="BARApplication.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="BAREngine.cpp">
+      <Filter>Base</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
