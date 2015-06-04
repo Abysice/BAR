@@ -20,7 +20,7 @@ void Engine::Init(void)
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "BAREngine", nullptr, nullptr);
+	window = glfwCreateWindow(WIDTH, HEIGHT, "BAR Engine", nullptr, nullptr);
 	glfwMakeContextCurrent(window);
 
 	if (window == NULL)
@@ -54,8 +54,8 @@ void Engine::Init(void)
 		glfwPollEvents(); // Check if any events have been activiated 
 		
 		Render();
-		glfwSwapBuffers(window);
-
+		
+		
 	}
 
 	glfwTerminate(); // Terminate GLFW
@@ -66,5 +66,5 @@ void Engine::Render(void)
 {
 	glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
-
+	glfwSwapBuffers(window);
 }
