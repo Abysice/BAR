@@ -121,6 +121,10 @@ public:
 	Matrix4& SetScale(float t);
 	//Set the matrix to a 3 axis scaling matrix
 	Matrix4& SetScale(float r, float s, float t);
+	//Set the matrix to a translation matrix
+	Matrix4& SetTranslation(const Vector3& p);
+	//Set the matrix to a translation matrix
+	Matrix4& SetTranslation(float x, float y, float z);
 
 	float& operator ()(int i, int j)
 	{

@@ -45,8 +45,9 @@ void Engine::Init(void)
 		#endif
 		return;
 	}
-
+	
 	glViewport(0, 0, WIDTH, HEIGHT);
+	
 
 	// Main Engine Loop
 	while (!glfwWindowShouldClose(window))

@@ -440,6 +440,137 @@ Matrix4& Matrix4::SetIdentity(void)
 	return (*this);
 }
 
+Matrix4 Matrix4::Identity(void)
+{
+	Matrix4 m;
+	m.SetIdentity();
+	return m;
+}
+
+Matrix4& Matrix4::SetRotationX(float angle)
+{
+	Vector2 t = Vector2(cos(angle), sin(angle));
+	mat[1][1] = t.x;
+	mat[1][2] = t.y;
+	mat[2][2] = mat[1][1];
+	mat[2][1] = -mat[1][2];
+	mat[0][0] = mat[3][3] = 1.0F;
+	mat[0][1] = mat[0][2] = mat[0][3] = mat[1][0] = mat[1][3] = mat[2][0] = mat[2][3] = mat[3][0] = mat[3][1] = mat[3][2] = 0.0F;
+
+	return (*this);
+}
+
+Matrix4& Matrix4::SetRotationY(float angle)
+{
+	Vector2 t = Vector2(cos(angle), sin(angle));
+	mat[0][0] = t.x;
+	mat[2][0] = t.y;
+	mat[2][2] = mat[0][0];
+	mat[0][2] = -mat[2][0];
+	mat[1][1] = mat[3][3] = 1.0F;
+	mat[0][1] = mat[0][3] = mat[1][0] = mat[1][2] = mat[1][3] = mat[2][1] = mat[2][3] = mat[3][0] = mat[3][1] = mat[3][2] = 0.0F;
+
+	return (*this);
+}
+
+Matrix4& Matrix4::SetRotationZ(float angle)
+{
+	Vector2 t = Vector2(cos(angle), sin(angle));
+	mat[0][0] = t.x;
+	mat[0][1] = t.y;
+	mat[1][1] = mat[0][0];
+	mat[1][0] = -mat[0][1];
+	mat[2][2] = mat[3][3] = 1.0F;
+	mat[0][2] = mat[0][3] = mat[1][2] = mat[1][3] = mat[2][0] = mat[2][1] = mat[2][3] = mat[3][0] = mat[3][1] = mat[3][2] = 0.0F;
+
+	return (*this);
+}
+
+Matrix4& Matrix4::SetRotationAxis(float angle, const Vector4& axis)
+{
+	Vector2 t = Vector2(cos(angle), sin(angle));
+	float u = 1.0F - t.x;
+
+	mat[0][0] = t.x + u * axis.x * axis.x;
+	mat[0][1] = u * axis.x * axis.y + t.y * axis.z;
+	mat[0][2] = u * axis.x * axis.z - t.y * axis.y;
+	mat[1][0] = u * axis.x * axis.y - t.y * axis.z;
+	mat[1][1] = t.x + u * axis.y * axis.y;
+	mat[1][2] = u * axis.y * axis.z + t.y * axis.x;
+	mat[2][0] = u * axis.x * axis.z + t.y * axis.y;
+	mat[2][1] = u * axis.y * axis.z - t.y * axis.x;
+	mat[2][2] = t.x + u * axis.z * axis.z;
+
+	mat[3][3] = 1.0F;
+	mat[0][3] = mat[1][3] = mat[2][3] = mat[3][0] = mat[3][1] = mat[3][2] = 0.0F;
+
+	return (*this);
+}
+
+//void Matrix4::GetEulerAngles(float *x, float *y, float *z) const;
+//{
+//
+//}
+
+Matrix4& Matrix4::SetEulerAngles(float x, float y, float z)
+{
+	Vector2 xrot = Vector2(cos(x), sin(x));
+	Vector2 yrot = Vector2(cos(y), sin(y));
+	Vector2 zrot = Vector2(cos(z), sin(z));
+
+	mat[0][0] = yrot.x * zrot.x;
+	mat[0][1] = xrot.x * zrot.y + xrot.y * yrot.y * zrot.x;
+	mat[0][2] = xrot.y * zrot.y - xrot.x * yrot.y * zrot.x;
+	mat[1][0] = -yrot.x * zrot.y;
+	mat[1][1] = xrot.x * zrot.x - xrot.y * yrot.y * zrot.y;
+	mat[1][2] = xrot.y * zrot.x + xrot.x * yrot.y * zrot.y;
+	mat[2][0] = yrot.y;
+	mat[2][1] = -xrot.y * yrot.x;
+	mat[2][2] = xrot.x * yrot.x;
+
+	mat[3][3] = 1.0F;
+	mat[0][3] = mat[1][3] = mat[2][3] = mat[3][0] = mat[3][1] = mat[3][2] = 0.0F;
+
+	return (*this);
+}
+
+Matrix4& Matrix4::SetScale(float t)
+{
+	mat[0][0] = mat[1][1] = mat[2][2] = t;
+	mat[3][3] = 1.0F;
+	mat[1][0] = mat[2][0] = mat[3][0] = mat[0][1] = mat[2][1] = mat[3][1] = mat[0][2] = mat[1][2] = mat[3][2] = mat[0][3] = mat[1][3] = mat[2][3] = 0.0F;
+	return (*this);
+}
+
+Matrix4& Matrix4::SetScale(float r, float s, float t)
+{
+	mat[0][0] = r;
+	mat[1][1] = s;
+	mat[2][2] = t;
+	mat[3][3] = 1.0F;
+	mat[1][0] = mat[2][0] = mat[3][0] = mat[0][1] = mat[2][1] = mat[3][1] = mat[0][2] = mat[1][2] = mat[3][2] = mat[0][3] = mat[1][3] = mat[2][3] = 0.0F;
+	return (*this);
+}
+
+Matrix4& Matrix4::SetTranslation(const Vector3& p)
+{
+	mat[3][0] = p.x;
+	mat[3][1] = p.y;
+	mat[3][2] = p.z;
+	mat[0][0] = mat[1][1] = mat[2][2] = mat[3][3] = 1.0F;
+	mat[1][0] = mat[2][0] = mat[0][1] = mat[2][1] = mat[0][2] = mat[1][2] = mat[0][3] = mat[1][3] = mat[2][3] = 0.0F;
+	return (*this);
+}
+
+Matrix4& Matrix4::SetTranslation(float x, float y, float z)
+{
+	mat[3][0] = x;
+	mat[3][1] = y;
+	mat[3][2] = z;
+	mat[0][0] = mat[1][1] = mat[2][2] = mat[3][3] = 1.0F;
+	mat[1][0] = mat[2][0] = mat[0][1] = mat[2][1] = mat[0][2] = mat[1][2] = mat[0][3] = mat[1][3] = mat[2][3] = 0.0F;
+	return (*this);
+}
 
 Matrix4 operator *(const Matrix4& m1, const Matrix4& m2)
 {
