@@ -1,35 +1,26 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
-
-#include "BARDefines.h"
+#include "BARApplication.h"
 #include "BARRendering.h"
+#include "BARBase.h"
 
 
 
-class Engine
+class Engine : public Singleton<Engine>
 {
 private:
-	static Engine * instance;
 	GLFWwindow * window;
 public:
-	Engine() = default;
+	Engine();
 
 	//Initialize the Windowing program and engine
 	void Init(void);
 	//Draw a frame
 	void Render(void);
-	//Return the singleton instance
-	static Engine * GetInstance()
-	{
-		if (!instance)
-			instance = new Engine();
-
-		return instance;
-	};
-
 
 };
 
+extern Engine * TheEngine;
 
 #endif

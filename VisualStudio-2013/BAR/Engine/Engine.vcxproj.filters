@@ -45,13 +45,16 @@
     <ClInclude Include="BARRendering.h">
       <Filter>Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="BARApplication.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
     <ClInclude Include="BAREngine.h">
       <Filter>Base</Filter>
     </ClInclude>
     <ClInclude Include="BARDefines.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="BARApplication.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="BARBase.h">
       <Filter>Base</Filter>
     </ClInclude>
   </ItemGroup>
@@ -83,10 +86,13 @@
     <ClCompile Include="BARRendering.cpp">
       <Filter>Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="BARApplication.cpp">
-      <Filter>Graphics</Filter>
-    </ClCompile>
     <ClCompile Include="BAREngine.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="BARApplication.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="BARBase.cpp">
       <Filter>Base</Filter>
     </ClCompile>
   </ItemGroup>

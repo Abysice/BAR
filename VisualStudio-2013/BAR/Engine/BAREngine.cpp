@@ -1,8 +1,15 @@
 #include "BAREngine.h"
 #include <Windows.h>
 
-Engine * Engine::instance = 0;
+
+Engine * TheEngine = nullptr;
+
 const GLuint WIDTH = 800, HEIGHT = 600;
+
+
+Engine::Engine() : Singleton<Engine>(TheEngine)
+{
+}
 
 
 void Engine::Init(void)
@@ -48,6 +55,8 @@ void Engine::Init(void)
 	
 	glViewport(0, 0, WIDTH, HEIGHT);
 	
+	//construct the application instance from the dll
+
 
 	// Main Engine Loop
 	while (!glfwWindowShouldClose(window))
