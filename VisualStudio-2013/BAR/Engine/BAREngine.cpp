@@ -56,21 +56,38 @@ void Engine::Init(void)
 	glViewport(0, 0, WIDTH, HEIGHT);
 	
 	//construct the application instance from the dll
-
+	LoadModules();
 
 	// Main Engine Loop
 	while (!glfwWindowShouldClose(window))
 	{
 		glfwPollEvents(); // Check if any events have been activiated 
-		
 		Render();
-		
-		
 	}
 
 	glfwTerminate(); // Terminate GLFW
 }
 
+void Engine::LoadModules(void)
+{
+	typedef Application*(__stdcall *ConstructProc)();
+	//HARD CODED FOR NOW
+	if (HINSTANCE hInst = LoadLibrary("C:\\git\\BAR\\VisualStudio-2013\\BAR\\Win32\\Debug\\Game.dll"))
+	{
+		ConstructProc ConstructApplication = (ConstructProc)GetProcAddress(hInst, "ConstructApplication");
+
+		if (ConstructApplication)
+		{
+			#if DEBUG_MODE
+				std::cout << "Game Module Loaded Correctly" << std::endl;
+			#endif
+
+			TheApplication = ConstructApplication();
+		}
+
+		//FreeLibrary(hInst);
+	}
+}
 
 void Engine::Render(void)
 {

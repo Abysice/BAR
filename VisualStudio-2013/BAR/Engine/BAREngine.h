@@ -16,6 +16,8 @@ public:
 
 	//Initialize the Windowing program and engine
 	void Init(void);
+	//Load the Game DLL
+	void LoadModules(void);
 	//Draw a frame
 	void Render(void);
 

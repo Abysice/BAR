@@ -4,7 +4,7 @@
 #include "BARBase.h"
 
 
-
+// Application class, to be subtyped by games pluging into the engine
 class Application : public Singleton<Application>
 {
 public:

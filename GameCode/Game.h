@@ -3,7 +3,7 @@
 
 #include "BAREngine.h"
 
-
+//Called by the Engine, must be as specified here
 extern "C"
 {
 	BARMODULEEXPORT Application *ConstructApplication(void);
@@ -19,7 +19,7 @@ public:
 
 
 
-
+//these need to be here to link to the engine
 extern Game * TheGame;
 
 

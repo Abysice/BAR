@@ -14,7 +14,7 @@ class Scene
 {
 private:
 	std::string worldName;
-	std::list<GameObject> renderList; //list of all things to be rendered, maybe switch to a map
+	std::list<GameObject> renderList; //list of all things to be rendered PLACEHOLDER
 	//Camera * mainCamera;
 
 public:

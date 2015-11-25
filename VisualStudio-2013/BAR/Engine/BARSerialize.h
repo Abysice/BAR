@@ -47,9 +47,6 @@ public:
 };
 
 
-
-
-
 //Represents a output serialization stream. (Packer)
 class Serializer
 {
